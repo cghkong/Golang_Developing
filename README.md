@@ -1,3 +1,3 @@
 # Developing_Go
 
-Go Learning Notes
+Go Program Learning Notes
