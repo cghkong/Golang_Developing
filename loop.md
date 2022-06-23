@@ -42,6 +42,18 @@ if v := math.Pow(x, n); v < lim {
 	}
 ```
 
+## switch
+switch 是编写一连串 if - else 语句的简便方法。它运行第一个值等于条件表达式的 case 语句。不过Go只运行选定的 case，而非之后所有的 case。 实际上，Go 自动提供了在这些语言中每个 case 后面所需的 break 语句。Go 的另一点重要的不同在于 switch 的 case 无需为常量，且取值不必为整数。
+```
+switch os := runtime.GOOS; os {
+      case "darwin":
+	   fmt.Println("OS X.")
+      case "linux":
+	   fmt.Println("Linux.")
+      default:
+	   fmt.Printf("%s.\n", os)
+  }
+```
 
 ## Tips和注意点
    1.当省略初始化语句和后置语句时，for循环可以退化为C中while循环
