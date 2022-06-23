@@ -43,7 +43,7 @@ if v := math.Pow(x, n); v < lim {
 ```
 
 ## switch
-switch 是编写一连串 if - else 语句的简便方法。它运行第一个值等于条件表达式的 case 语句。不过Go只运行选定的 case，而非之后所有的 case。 实际上，Go 自动提供了在这些语言中每个 case 后面所需的 break 语句。Go 的另一点重要的不同在于 switch 的 case 无需为常量，且取值不必为整数。
+switch 是编写一连串 if - else 语句的简便方法。它运行第一个值等于条件表达式的 case 语句。不过Go只运行选定的 case，而非之后所有的 case。 实际上，Go 自动提供了在这些语言中每个 case 后面所需的 break 语句。Go 的另一点重要的不同在于 switch 的 case 无需为常量，且取值不必为整数。switch 的 case 语句从上到下顺次执行，直到匹配成功时停止。
 ```
 switch os := runtime.GOOS; os {
       case "darwin":
@@ -53,6 +53,30 @@ switch os := runtime.GOOS; os {
       default:
 	   fmt.Printf("%s.\n", os)
   }
+```
+没有条件的switch语句，同 switch true 一样。使得if else 表达可以更加简洁```
+```
+t := time.Now()
+switch {
+case t.Hour() < 12:
+	fmt.Println("Good morning!")
+case t.Hour() < 17:
+	fmt.Println("Good afternoon.")
+default:
+	fmt.Println("Good evening.")
+}
+```
+
+## defer语句
+defer 语句会将函数推迟到外层函数返回之后执行。推迟调用的函数其参数会立即求值，但直到外层函数返回前该函数都不会被调用。推迟的函数调用会被压入一个栈中。当外层函数返回时，被推迟的函数会按照后进先出的顺序调用。
+```
+func main() {
+    fmt.Println("counting")
+    for i := 0; i < 10; i++ {
+	defer fmt.Println(i)
+    }
+    fmt.Println("done")
+}
 ```
 
 ## Tips和注意点
