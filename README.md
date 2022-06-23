@@ -1,6 +1,6 @@
 # Golang_Developing
 
-golang Learning Notes（学习中···）
+golang Learning Notes（正在学习中···）
 
 ##chapter 1 数据类型
 
