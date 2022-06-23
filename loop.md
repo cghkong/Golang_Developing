@@ -32,6 +32,7 @@ if v := math.Pow(x, n); v < lim {
 	}
 ```
 3. if 和 else 
+
 需要注意的是，if 的简短语句中声明的变量同样可以在任何对应的 else 块中使用
 ```
 if v := math.Pow(x, n); v < lim {
