@@ -2,6 +2,8 @@
 
 golang Learning Notes（正在学习中···）
 
+##chapter 0 Golang介绍
+
 ##chapter 1 数据类型
 
 ##chapter 2 循环控制语句
