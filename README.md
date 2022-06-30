@@ -17,5 +17,3 @@ golang Learning Notes（正在学习中···）
 ##chapter 6 内置函数介绍
 
 ##chapter 7 内存模型
-
-##chapter 8 Goroutine
